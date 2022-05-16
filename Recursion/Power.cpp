@@ -41,7 +41,7 @@ public:
             return a * temp * temp;
         }
     }
-    // Time Complexity: O(logn); Space Complexity: 0(1)
+    // Time Complexity: O(log(n)); Space Complexity: 0(1)
 
     // Non-recursive method
     int power4(int a, unsigned int n) {
