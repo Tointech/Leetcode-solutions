@@ -28,8 +28,7 @@ public:
         return F[n];
     }
 
-
-    // De-recursion
+    // Non-recursive method
     int fibonacci3(int n) {
         int F[100];
         // Bai toan co so
