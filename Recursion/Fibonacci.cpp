@@ -31,7 +31,6 @@ public:
     // Non-recursive method
     int fibonacci3(int n) {
         int F[100];
-        // Bai toan co so
         F[1] = 1;
         F[2] = 1;
         for (int i = 3; i <= 10; i++) {
