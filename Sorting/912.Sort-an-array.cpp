@@ -14,15 +14,15 @@ public:
         while (temp.size() < newLength) {
             if (idx1 < length1&& idx2 < length2) { // arr1 & arr2 are not empty
                 if (arr1[idx1] <= arr2[idx2]) { // arr1 is smaller
-                    temp.push_back(arr1[idx1]);;
+                    temp.push_back(arr1[idx1]);
                     idx1++;
                 } else { // arr2 is smaller
-                    temp.push_back(arr2[idx2]);;
+                    temp.push_back(arr2[idx2]);
                     idx2++;
                 }
             } else { // arr1 or arr2 is empty
                 if (idx1 < length1) { 
-                    temp.push_back(arr1[idx1]);;
+                    temp.push_back(arr1[idx1]);
                     idx1++;
                 } else {
                     temp.push_back(arr2[idx2]);;
