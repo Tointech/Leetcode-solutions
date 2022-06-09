@@ -2,6 +2,17 @@
 
 using namespace std;
 
+struct Node {
+    int data;
+    Node *pNext;
+};
+
+struct List {
+    Node *pHead;
+    Node *pTail;
+};
+
+
 class LinkedList {
 public:
     void printList(List l) {
