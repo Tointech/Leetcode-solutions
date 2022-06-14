@@ -157,6 +157,82 @@ public:
             quickSort(a, p, high);
         }
     }
+
+    void countingSort(int a[], int n) {
+        int output[n];
+        int max = a[0];
+        int min = a[0];
+    
+        for(int i = 1; i < n; i++) {
+            if(a[i] > max) {
+                max = a[i];
+            } else if(a[i] < min) {
+                min = a[i];
+            }
+        }
+    
+        int size = max - min + 1;
+        int countArray[size];
+        for(int i = 0; i < size; i++) {
+            countArray[i]=0;
+        }
+    
+        for(int i = 0; i < n; i++) {
+            countArray[a[i] - min]++;
+        }
+
+        for(int i = 1; i < size; i++) {
+            countArray[i] += countArray[i - 1];
+        }
+    
+        for(int i = 0; i < n; i++) {
+            output[countArray[a[i] - min] - 1] = a[i];
+            countArray[a[i] - min]--;
+        }
+    
+        for(int i = 0; i < n; i++) {
+            a[i] = output[i];
+        }
+    }
+
+    int findMax(int a[], int n) {
+        int max = a[0];
+        for (int i = 1; i < n; i++) {
+            if (a[i] > max) max = a[i];
+        }
+        return max;
+    }
+
+    void countingSort(int a[], int n, int exp) {
+        int *result = new int [n + 1];
+        int stor[10] = {0};
+        
+        for (int i = 0; i < n; i++) {
+            stor[(a[i] / exp) % 10]++;
+        }
+    
+        for (int i = 1; i < 10; i++) {
+            stor[i] += stor[i - 1]; 
+        }
+
+        for (int i = n - 1; i >= 0; i--) {
+            result[stor[(a[i] / exp) % 10] - 1] = a[i];
+            stor[(a[i] / exp) % 10]--;        
+        }
+
+        for (int i = 0; i < n; i++) {
+            a[i] = result[i];
+        }
+
+        delete[] result;
+    }
+
+    void radixSort(int a[], int n) {
+        int len = findMax(a, n);
+        for (int exp = 1; len / exp > 0; exp *= 10) {
+            countingSort(a, n, exp);
+        }
+    }
 };
 
 int main() {
@@ -164,7 +240,7 @@ int main() {
     int n = sizeof(a)/sizeof(a[0]);
 
     SortingMethod obj;
-    obj.mergeSort(a, 0, n-1);
+    obj.countingSort(a, n);
     obj.printArray(a, n);
 
     return 0;
