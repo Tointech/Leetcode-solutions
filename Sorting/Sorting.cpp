@@ -108,6 +108,10 @@ public:
         }
     }
 
+    void mergeSort(int a[], int n) {
+        mergeSort(a, 0, n - 1);
+    }
+
     void heapify(int a[], int n, int i) {
         int largest = i;
         int l = 2 * i + 1;
@@ -156,6 +160,10 @@ public:
             quickSort(a, low, p-1);
             quickSort(a, p, high);
         }
+    }
+
+    void quickSort(int a[], int n) {
+        quickSort(a, 0, n - 1);
     }
 
     void countingSort(int a[], int n) {
