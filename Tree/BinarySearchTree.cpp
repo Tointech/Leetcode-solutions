@@ -47,18 +47,36 @@ public:
         }
     }
 
-    void inorderTraversal(Node *root) {
+    void preOrderTraversal(Node *root) {
         if (root == nullptr) {
             return;
         }
-        inorderTraversal(root->left);
         cout << root->val << " ";
-        inorderTraversal(root->right);
+        preOrderTraversal(root->left);
+        preOrderTraversal(root->right);
+    }
+
+    void inOrderTraversal(Node *root) {
+        if (root == nullptr) {
+            return;
+        }
+        inOrderTraversal(root->left);
+        cout << root->val << " ";
+        inOrderTraversal(root->right);
+    }
+
+    void postOrderTraversal(Node *root) {
+        if (root == nullptr) {
+            return;
+        }
+        postOrderTraversal(root->left);
+        postOrderTraversal(root->right);
+        cout << root->val << " ";
     }
 
     void printBST(BinarySearchTree *tree) {
         Node *temp = tree->root;
-        inorderTraversal(temp);
+        inOrderTraversal(temp);
         cout << endl;
     }
 
