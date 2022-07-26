@@ -2,14 +2,77 @@
 
 using namespace std;
 
+// Max heap implement
+class MyHeapA {
+public:
+    int parent(int a[], int n, int i) {
+        return i;
+    }
+
+    int left(int a[], int n, int i) {
+        return 2 * i + 1;
+    }
+
+    int right(int a[], int n, int i) {
+        return 2 * i + 2;
+    }
+
+    void swap(int &a, int &b) {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+
+    void maxHeapify(int a[], int n, int i) {
+        int p = parent(a, n, i);
+        int l = left(a, n, i);
+        int r = right(a, n, i);
+
+        if (l < n && a[l] > a[p]) {
+            p = l;
+        }
+
+        if (r < n && a[r] > a[p]) {
+            p = r;
+        }
+
+        if (p != i) {
+            swap(a[i], a[p]);
+            maxHeapify(a, n, p);
+        }
+    }
+
+    void buildMaxHeap(int a[], int n) {
+        for (int i = n/2-1; i >= 0; i--) {
+            maxHeapify(a, n, i);
+        }
+    }
+
+    void heapSort(int a[], int n) {
+        buildMaxHeap(a, n);
+
+        for (int i = n-1; i >= 0; i--) {
+            swap(a[0], a[i]);
+            maxHeapify(a, i, 0);
+        }
+    }
+
+    void printArray(int a[], int n) {
+        for (int i = 0; i < n; i++) {
+            cout << a[i] << " ";
+        }
+        cout << "\n";
+    }
+};
+
 // Min heap implement
-class MyHeap {
+class MyHeapB {
 public:
     static const int MAX_SIZE = 100;
     int arr[MAX_SIZE + 1];
     int size;
 
-    MyHeap() {
+    MyHeapB() {
         size = 0;
     }
 
@@ -101,7 +164,7 @@ public:
 };
 
 int main() {
-    MyHeap *myHeap = new MyHeap();
+    MyHeapB *myHeap = new MyHeapB();
     myHeap->add(10);
     myHeap->add(5);
     myHeap->add(1);
