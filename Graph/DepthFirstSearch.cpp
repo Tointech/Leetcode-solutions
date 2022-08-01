@@ -38,12 +38,12 @@ public:
     }
 
     // Implement with recursion
-    void recursion(int u, vector<bool> visited) {
+    void recursion(int u, vector<bool> &visited) {
+        visited[u] = true;
         cout << u << " ";
         
         for (int v = SIZE - 1; v >= 0; v--) {
             if (graph[u][v] == 1 && !visited[v]) {
-                visited[v] = true;
                 recursion(v, visited);
             }
         }
@@ -52,7 +52,6 @@ public:
     void recursionDFS(int start) {
         vector<bool> visited;
         visited.resize(SIZE, false);
-        visited[start] = true;
 
         recursion(start, visited);
         cout << endl;
