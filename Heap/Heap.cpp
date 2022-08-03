@@ -6,7 +6,7 @@ using namespace std;
 class MyHeapA {
 public:
     int parent(int a[], int n, int i) {
-        return i;
+        return (i - 1)/2;
     }
 
     int left(int a[], int n, int i) {
