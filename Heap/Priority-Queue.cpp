@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// Min-heap
 class MyPriorityQueue {
 public:
     int H[50];
@@ -26,29 +27,29 @@ public:
     }
 
     void shiftUp(int i) {
-        while (i > 0 && H[parent(i)] < H[i]) {
+        while (i > 0 && H[parent(i)] > H[i]) {
             swap(H[parent(i)], H[i]);
             i = parent(i);
         }
     }
 
     void shiftDown(int i) {
-        int maxIndex = i;    
+        int minIndex = i;    
         int l = leftChild(i);
     
-        if (l <= size && H[l] > H[maxIndex]) {
-            maxIndex = l;
+        if (l <= size && H[l] < H[minIndex]) {
+            minIndex = l;
         }
     
         int r = rightChild(i);
     
-        if (r <= size && H[r] > H[maxIndex]) {
-            maxIndex = r;
+        if (r <= size && H[r] < H[minIndex]) {
+            minIndex = r;
         }
     
-        if (i != maxIndex) {
-            swap(H[i], H[maxIndex]);
-            shiftDown(maxIndex);
+        if (i != minIndex) {
+            swap(H[i], H[minIndex]);
+            shiftDown(minIndex);
         }
     }
  
@@ -71,12 +72,10 @@ public:
         int oldp = H[i];
         H[i] = p;
     
-        if (p > oldp) {
+        if (p < oldp)
             shiftUp(i);
-        }
-        else {
+        else
             shiftDown(i);
-        }
     }
 
     int getMax() {
@@ -100,15 +99,15 @@ public:
 };
 
 int main() {
-    /*          45
+    /*          7
               /   \
-           31      14
+           13      11
           /  \    /  \
-         13  20  7   11
-        /  \
-       12   7
+         14  31  20   12
+        /  
+       45   
     
-    Array as: 45 31 14 13 20 7 11 12 7 */
+    Array as: 7 13 11 14 31 20 12 45 */
 
     MyPriorityQueue obj;
 
@@ -120,19 +119,18 @@ int main() {
     obj.insert(7);
     obj.insert(11);
     obj.insert(13);
-    obj.insert(7);
  
     int i = 0;
  
     cout << "Priority Queue : ";
     obj.print(i);
  
-    cout << "Node with maximum priority : " << obj.deleteMax() << "\n";
+    cout << "Node with 1st priority : " << obj.deleteMax() << "\n";
  
-    cout << "Priority queue after extracting maximum : ";
+    cout << "Priority queue after extracting 1st priority: ";
     obj.print(i);
 
-    obj.changePriority(2, 49);
+    obj.changePriority(2, 1);
     cout << "Priority queue after priority change : ";
     obj.print(i);
  
