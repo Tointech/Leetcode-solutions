@@ -188,6 +188,63 @@ public:
         return root;
     }
 
+    Node* deleteIterative(Node* root, int key) {
+        Node* curr = root;
+        Node* prev = NULL;
+
+        while (curr != NULL && curr->val != key) {
+            prev = curr;
+            if (key < curr->val)
+                curr = curr->left;
+            else
+                curr = curr->right;
+        }
+    
+        if (curr == NULL) {
+            cout << "Key " << key << " not found in the provided BST.\n";
+            return root;
+        }
+
+        if (curr->left == NULL || curr->right == NULL) {
+            Node* newCurr;
+
+            if (curr->left == NULL)
+                newCurr = curr->right;
+            else
+                newCurr = curr->left;
+
+            if (prev == NULL)
+                return newCurr;
+
+            if (curr == prev->left)
+                prev->left = newCurr;
+            else
+                prev->right = newCurr;
+
+            free(curr);
+        }
+
+        else {
+            Node* p = NULL;
+            Node* temp;
+    
+            temp = curr->right;
+            while (temp->left != NULL) {
+                p = temp;
+                temp = temp->left;
+            }
+    
+            if (p != NULL)
+                p->left = temp->right;
+            else
+                curr->right = temp->right;
+    
+            curr->val = temp->val;
+            free(temp);
+        }
+        return root;
+    }
+
     Node * deleteOddValueNode(Node *root) {
         if (root == nullptr) {
             return root;
