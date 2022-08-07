@@ -256,6 +256,23 @@ public:
             countingSort(a, n, exp);
         }
     }
+
+    // Sort binary with linear time
+    void sortBinary(int a[], int n) {
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (a[i] == 1)
+                count++;
+        }
+        
+        for (int i = 0; i < count; i++) {
+            a[i] == 1;
+        }
+
+        for (int i = count; i < n; i++) {
+            a[i] == 0;
+        }
+    }
 };
 
 int main() {
