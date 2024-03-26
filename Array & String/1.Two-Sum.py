@@ -13,10 +13,10 @@ class Solution:
         return []
 
 if __name__ == "__main__":
-    s = Solution()
+    sol = Solution()
     
     nums = [3,2,4,1,7]
     target = 6
 
-    result = s.twoSum(nums, target) 
+    result = sol.twoSum(nums, target) 
     print(result)
