@@ -12,6 +12,7 @@ class Solution:
         
         return []
 
+
 if __name__ == "__main__":
     sol = Solution()
     
