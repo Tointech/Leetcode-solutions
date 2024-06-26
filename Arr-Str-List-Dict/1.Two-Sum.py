@@ -34,6 +34,6 @@ if __name__ == "__main__":
     nums = [3,2,4]
     target = 6
 
-    s = Solution()
-    result = s.twoSumHashTable(nums, target) 
+    sol = Solution()
+    result = sol.twoSumHashTable(nums, target) 
     print(result)
