@@ -1,8 +1,8 @@
 from typing import List 
 
 class Solution:
-    # Brute Force: O(n^2) = 1654 ms
-    def twoSumBruteForce(self, nums:List[int], target:int) -> List[int]:
+    # Brute Force: O(n^2)
+    def twoSum(self, nums:List[int], target:int) -> List[int]:
         n = len(nums)
  
         for i in range(n-1):
@@ -35,5 +35,5 @@ if __name__ == "__main__":
     target = 6
 
     sol = Solution()
-    result = sol.twoSumHashTable(nums, target) 
+    result = sol.twoSum(nums, target) 
     print(result)
