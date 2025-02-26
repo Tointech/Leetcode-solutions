@@ -1,5 +1,5 @@
 class Solution:
-    # Brute force: O(n)
+    # Brute force: O(n^2)
     def longestSubStringNoDuplicate1(self, s: str) -> str:
         longestStr = ""
 

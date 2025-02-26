@@ -31,6 +31,9 @@ class Solution:
                 return False
         
         return True
+    
+    def isPalindromic(self, s) -> bool:
+        return s == s[::-1]
 
 
 if __name__ == "__main__":
@@ -41,3 +44,6 @@ if __name__ == "__main__":
 
     binary = "101010"
     print(sol.isBinary(binary)) # True
+    
+    s = "babab"
+    print(sol.isPalindromic(s)) # True

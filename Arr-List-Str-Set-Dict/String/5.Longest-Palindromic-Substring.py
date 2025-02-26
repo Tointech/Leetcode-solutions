@@ -1,22 +1,26 @@
 class Solution:
-    # Brute Force: O(N^3)
-    def longestPalindrome(self, s:str) -> str:
-        l = len(s)
-        maxLen = 1
-        maxStr = s[0]
+    # Brute Force: O(N^2)
+    def longestPalindrome1(self, s:str) -> str:
+        longestStr = s[0]
 
-        for i in range(l-1):
-            for j in range(i+1, l):
-                str = s[i:j+1]
-                if maxLen < j-i+1 and str == str[::-1]:
-                    maxLen = j-i+1
-                    maxStr = s[i:j+1]
+        for i in range(len(s)-1):
+            currentStr = ""
 
-        return maxStr
+            for j in range(i, len(s)):
+                currentStr = s[i:j+1]
+
+                if currentStr == currentStr[::-1]:
+                    if len(currentStr) > len(longestStr):
+                        longestStr = currentStr
+                else:
+                    j += 1
+        
+        return longestStr
+
 
 if __name__ == "__main__":
     sol = Solution()
-    s1 = "babb"
+    s1 = "babab"
 
-    result = sol.longestPalindrome(s1)
+    result = sol.longestPalindrome2(s1)
     print(result)
