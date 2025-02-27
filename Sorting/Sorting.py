@@ -14,6 +14,50 @@ class Sorting():
 
         return arr
     
+    # O(nlogn)
+    def merge_sort(self, arr):
+        if len(arr) <= 1:
+            return arr  # Base case: already sorted
+
+        # Step 1: Split the array into two halves
+        mid = len(arr) // 2
+        left_half = self.merge_sort(arr[:mid])
+        right_half = self.merge_sort(arr[mid:])
+
+        # Step 2: Merge the sorted halves
+        return self.merge(left_half, right_half)
+
+    def merge(left, right):
+        merged = []
+        i = j = 0
+
+        # Merge elements in sorted order
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                merged.append(left[i])
+                i += 1
+            else:
+                merged.append(right[j])
+                j += 1
+
+        # Append remaining elements (if any)
+        merged.extend(left[i:])
+        merged.extend(right[j:])
+        
+        return merged
+    
+    # O(nlogn)
+    def quick_sort(self, arr):
+        if len(arr) <= 1:
+            return arr  # Base case: already sorted
+
+        pivot = arr[len(arr) // 2]  # Choose the middle element as the pivot
+        left = [x for x in arr if x < pivot]   # Elements smaller than pivot
+        middle = [x for x in arr if x == pivot]  # Elements equal to pivot
+        right = [x for x in arr if x > pivot]   # Elements greater than pivot
+
+        return self.quick_sort(left) + middle + self.quick_sort(right)
+    
 if __name__ == "__main__":
     sol = Sorting()
 

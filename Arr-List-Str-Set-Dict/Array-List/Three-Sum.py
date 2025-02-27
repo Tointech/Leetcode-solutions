@@ -13,8 +13,6 @@ class Solution:
 
         return []
 
-    #
-
 if __name__ == "__main__":
     # Inputs
     nums = [3,2,5,1,8]
