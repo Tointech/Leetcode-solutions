@@ -34,7 +34,6 @@ def matrix_dot_vector_library(a, b):
 
 
 # TODO: Pytorch version
-
 import torch
 
 
@@ -50,7 +49,7 @@ def matrix_dot_vector_torch(a, b) -> torch.Tensor:
     if a_t.size(1) != b_t.size(0):
         return torch.tensor(-1)
     # Your implementation here
-    return torch.mv(a_t, b_t)  # Matrix-vector multiplication using PyTorch
+    return torch.mv(a_t, b_t)
 
 
 if __name__ == "__main__":
