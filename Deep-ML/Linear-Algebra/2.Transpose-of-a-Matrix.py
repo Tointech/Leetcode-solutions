@@ -1,4 +1,5 @@
-from typing import List, Union
+import numpy as np
+import torch
 
 
 def transpose_matrix(a: list[list[int | float]]) -> list[list[int | float]]:
@@ -12,18 +13,16 @@ def transpose_matrix(a: list[list[int | float]]) -> list[list[int | float]]:
     return ans
 
 
-# TODO: Library usage version
-import numpy as np
+# TODO: Numpy version
 
 
-def transpose_matrix_library(a):
+def transpose_matrix_numpy(a):
     a = np.array(a)
     transposed = np.transpose(a)  # or a.T
     return transposed.tolist()
 
 
 # TODO: Pytorch version
-import torch
 
 
 def transpose_matrix_torch(a) -> torch.Tensor:
@@ -39,6 +38,6 @@ def transpose_matrix_torch(a) -> torch.Tensor:
 
 if __name__ == "__main__":
     a = [[1, 2, 3], [4, 5, 6]]
-    ans = transpose_matrix_library(a)
+    ans = transpose_matrix_numpy(a)
 
     print(ans)

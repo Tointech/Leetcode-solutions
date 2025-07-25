@@ -1,4 +1,5 @@
-from typing import List, Union
+import numpy as np
+import torch
 
 
 def matrix_dot_vector(
@@ -19,11 +20,10 @@ def matrix_dot_vector(
     return ans
 
 
-# TODO: Library usage version
-import numpy as np
+# TODO: Numpy version
 
 
-def matrix_dot_vector_library(a, b):
+def matrix_dot_vector_numpy(a, b):
     a = np.array(a)
     b = np.array(b)
 
@@ -34,7 +34,6 @@ def matrix_dot_vector_library(a, b):
 
 
 # TODO: Pytorch version
-import torch
 
 
 def matrix_dot_vector_torch(a, b) -> torch.Tensor:

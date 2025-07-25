@@ -1,8 +1,9 @@
 import numpy as np
+import torch
 
 
-# TODO: Library usage version
-def reshape_matrix_library(
+# TODO: Numpy version
+def reshape_matrix_numpy(
     a: list[list[int | float]], new_shape: tuple[int, int]
 ) -> list[list[int | float]]:
     a = np.array(a)
@@ -11,7 +12,6 @@ def reshape_matrix_library(
 
 
 # TODO: Pytorch version
-import torch
 
 
 def reshape_matrix_pytorch(a, new_shape) -> torch.Tensor:
