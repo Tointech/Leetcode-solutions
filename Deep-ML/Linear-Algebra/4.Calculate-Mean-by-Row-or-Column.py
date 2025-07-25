@@ -27,7 +27,7 @@ def calculate_matrix_mean_torch(matrix, mode: str) -> torch.Tensor:
 
 if __name__ == "__main__":
     matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-    mode = "column"  # or "column"
+    mode = "column"  # or "row"
 
     mean_values = calculate_matrix_mean_torch(matrix, mode)
     print(f"Mean values by {mode}: {mean_values}")
