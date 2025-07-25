@@ -1,6 +1,6 @@
 class Solution:
     def myAtoi(self, s: str) -> int:
-        s = s.strip()
+        s = s.strip()  # Remove leading and trailing whitespace
 
         if not s:
             return 0
