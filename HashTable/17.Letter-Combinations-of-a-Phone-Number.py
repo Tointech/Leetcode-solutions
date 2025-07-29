@@ -35,20 +35,23 @@ if __name__ == "__main__":
     sol = Solution()
 
     digits = "23"
-    # backtrack(index, current_combination)
-    # 0
-    # 1 a
-    # 2 ad
-    # 2 ae
-    # 2 af
-    # 1 b
-    # 2 bd
-    # 2 be
-    # 2 bf
-    # 1 c
-    # 2 cd
-    # 2 ce
-    # 2 cf
+    # backtrack(index=0, current_combination='')
+    # letters: abc
+    # backtrack(index=1, current_combination='a')
+    # letters: def
+    # backtrack(index=2, current_combination='ad')
+    # backtrack(index=2, current_combination='ae')
+    # backtrack(index=2, current_combination='af')
+    # backtrack(index=1, current_combination='b')
+    # letters: def
+    # backtrack(index=2, current_combination='bd')
+    # backtrack(index=2, current_combination='be')
+    # backtrack(index=2, current_combination='bf')
+    # backtrack(index=1, current_combination='c')
+    # letters: def
+    # backtrack(index=2, current_combination='cd')
+    # backtrack(index=2, current_combination='ce')
+    # backtrack(index=2, current_combination='cf')
 
     result = sol.letterCombinations(digits)
 
