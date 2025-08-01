@@ -2,6 +2,7 @@
 
 ## Array & Hashing
 - [x] [Contains Duplicate](./217.Contains-Duplicate.py) - Easy
+- [x] [Valid Anagram](./242.Valid-Anagram.py) - Easy
 ## Two Pointers
 ## Sliding Window
 ## Stack
