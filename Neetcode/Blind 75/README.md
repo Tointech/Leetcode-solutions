@@ -1,9 +1,10 @@
 # Problem set in [Neetcode Blind 75](https://neetcode.io/practice)
 
 ## Array & Hashing
-- [x] [Contains Duplicate](./217.Contains-Duplicate.py) - Easy
-- [x] [Valid Anagram](./242.Valid-Anagram.py) - Easy
+- [x] [Contains Duplicate](./Array%20%20&%20Hashing/217.Contains-Duplicate.py) - Easy
+- [x] [Valid Anagram](./Array%20%20&%20Hashing/242.Valid-Anagram.py) - Easy
 ## Two Pointers
+- [x] [Valid Palindrome](./Two%20Pointers/125.Valid-Palindrome.py) - Easy
 ## Sliding Window
 ## Stack
 ## Binary Search
