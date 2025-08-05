@@ -6,9 +6,9 @@
 ## Two Pointers
 - [x] [Valid Palindrome](./Two%20Pointers/125.Valid-Palindrome.py) - Easy
 ## Sliding Window
-- [x] [Best Time to Buy and Sell Stock](./Sliding%20Window/121.Best-Time-to-Buy-and-Sell-Stock.py)
+- [x] [Best Time to Buy and Sell Stock](./Sliding%20Window/121.Best-Time-to-Buy-and-Sell-Stock.py) - Easy
 ## Stack
-- [x] [Valid Parentheses](./Stack/20.Valid-Parentheses.py)
+- [x] [Valid Parentheses](./Stack/20.Valid-Parentheses.py) - Easy
 ## Binary Search
 ## Linked List
 ## Trees
