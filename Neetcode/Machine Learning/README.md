@@ -2,7 +2,7 @@
 
 - [x] [Gradient Descent](./Gradient%20Descent/Gradient-Descent.py) - Easy
 - [x] [Linear Regression (Forward)](./Linear%20Regression/Forward.py) - Easy
-- [ ] Linear Regression (Training) - Medium
+- [x] [Linear Regression (Training)](./Linear%20Regression/Training.py) - Medium
 - [ ] Neural Networks - Easy   	
 - [ ] Pytorch Basics - Easy
 - [ ] Digit Classifier - Medium	
