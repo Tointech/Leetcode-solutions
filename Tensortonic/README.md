@@ -6,7 +6,7 @@
 
 ## Classic ML
 ## Neural Networks
-## Optimization
+## [Optimization](./Optimization/)
 
 ## Linear Algebra
 ## Probability and Statistics
