@@ -10,6 +10,9 @@
 ## Neural Networks
 ## [Optimization](./Optimization/)
 1. [Logistic Regression Training Loop](https://www.tensortonic.com/problems/logistic-regression-training) - Medium - [Solution](./1.Logistic-Regression-Training-Loop.py)
+2. [Implement Gradient Descent for a 1D Quadratic](https://www.tensortonic.com/problems/gradient-descent-quadratic) - Easy - [Solution](./2.Implement-Gradient-Descent-for-a-1D-Quadratic.py)
+3. [Implement Adam Optimizer Step](./3.Implement-Adam-Optimizer-Step.py) - Easy - [Solution](./3.Implement-Adam-Optimizer-Step.py)
+
 
 ## Linear Algebra
 ## Probability and Statistics
