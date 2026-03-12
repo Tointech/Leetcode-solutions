@@ -4,6 +4,7 @@
 ## [Activation Functions](./Activation-Functions/)
 1. [Implement Sigmoid in Numpy](https://www.tensortonic.com/problems/sigmoid-numpy) - Easy - [Solution](./1.Implement-Sigmoid-in-Numpy.py)
 2. [Implement Tanh Activation](https://www.tensortonic.com/problems/tanh-activation) - Easy - [Solution](./2.Implement-Tanh-Activation.py)
+9. [Implement Softmax Function](https://www.tensortonic.com/problems/softmax-function) - Easy - [Solution](./9.Implement-Softmax-Function.py)
 ## Metrics & Evaluation
 
 ## Classic ML
