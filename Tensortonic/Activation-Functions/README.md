@@ -39,7 +39,6 @@ $$
 
 ## [Implement Leaky ReLU (with a)](https://www.tensortonic.com/problems/leaky-relu) - Easy - [Solution](./7.Implement-Leaky-ReLU-(with-a).py)
 
-
 Standard ReLU outputs 0 for negative inputs, which can cause "dead neurons".
 
 By introducing a small leak value  α, Leaky ReLU allows a small gradient to flow for negative inputs, helping prevent the dying ReLU problem and keeping learning active.
