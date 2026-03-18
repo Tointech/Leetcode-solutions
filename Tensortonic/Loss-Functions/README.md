@@ -29,3 +29,20 @@ $$
 \text{MSE} = \frac{1}{N} \sum_{i=0}^{N-1}(y_{\text{pred}}[i]-y_{\text{true}}[i])^2
 $$
 where N is the number of samples.
+
+## [Cosine Embedding Loss](https://www.tensortonic.com/problems/cosine-embedding-loss) - Easy - [Solution](./10.Cosine-Embedding-Loss.py)
+Cosine embedding loss measures whether two vectors are similar or dissimilar based on a label. It is commonly used in metric learning and siamese networks to learn embeddings where similar items are close and dissimilar items are far apart in cosine space.
+
+Given two vectors, a label (+1 for similar, -1 for dissimilar), and a margin, compute the cosine embedding loss.
+
+First compute the cosine similarity:
+$$
+\cos(x_1, x_2) = \frac{x_1 \cdot x_2}{\| x_1 \| \cdot \| x_2 \|}
+$$
+Then compute the loss based on the label:
+$$
+L = 1 - \cos(x_1, x_2) \quad \text{if label = 1}
+$$
+$$
+L = \max(0, \cos(x_1, x_2) - \text{margin}) \quad \text{if label = -1}
+$$
