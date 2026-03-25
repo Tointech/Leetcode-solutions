@@ -17,7 +17,7 @@
 ## [Optimization](./Optimization/)
 1. [Logistic Regression Training Loop](https://www.tensortonic.com/problems/logistic-regression-training) - Medium - [Solution](./Optimization/1.Logistic-Regression-Training-Loop.py)
 2. [Implement Gradient Descent for a 1D Quadratic](https://www.tensortonic.com/problems/gradient-descent-quadratic) - Easy - [Solution](./Optimization/2.Implement-Gradient-Descent-for-a-1D-Quadratic.py)
-3. [Implement Adam Optimizer Step](./3.Implement-Adam-Optimizer-Step.py) - Easy - [Solution](./Optimization/3.Implement-Adam-Optimizer-Step.py)
+3. [Implement Adam Optimizer Step](https://www.tensortonic.com/problems/adam-optimizer) - Easy - [Solution](./Optimization/3.Implement-Adam-Optimizer-Step.py)
 
 
 ## Linear Algebra
@@ -32,5 +32,6 @@
 
 ## Transformers
 ## NLP
+1. [Pad Sequences](https://www.tensortonic.com/problems/pad-sequences) - Medium - [Solution](./NLP/1.Pad-Sequences.py) 
 ## Computer Vision
 ## Reinforcement Learning
